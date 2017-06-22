@@ -30,9 +30,9 @@ namespace ConsoleApplication1 {
 		static void OnEnteredFlurry(bool a_mhTrigger) {
 			m_enteredFlurryAt = m_currentTimer;
 			if (a_mhTrigger) {
-				m_nextOh -= (m_nextOh - m_currentTimer) * 0.3f;
+				m_nextOh -= (m_nextOh - m_currentTimer) / 1.3f;
 			} else {
-				m_nextMh -= (m_nextMh - m_currentTimer) * 0.3f;
+				m_nextMh -= (m_nextMh - m_currentTimer) / 1.3f;
 			}
 
 			if (m_nextOh < m_currentTimer) {
@@ -90,7 +90,7 @@ namespace ConsoleApplication1 {
 			}
 
 			if (m_flurryCharges > 0) {
-				a_nextAttack = m_currentTimer + (a_wpnAttackSpeed * 0.3f);
+				a_nextAttack = m_currentTimer + (a_wpnAttackSpeed / 1.3f);
 			} else {
 				a_nextAttack = m_currentTimer + a_wpnAttackSpeed;
 			}
