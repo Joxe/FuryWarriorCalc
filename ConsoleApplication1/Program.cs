@@ -41,9 +41,9 @@ namespace ConsoleApplication1 {
 			m_enteredFlurryAt = m_currentTimer;
 
 			if (a_mhTrigger) {
-				m_nextOh -= (m_nextOh - m_currentTimer) / FLURRY_MULTIPLIER;
+				m_nextOh -=  (m_nextOh - m_currentTimer)-((m_nextOh - m_currentTimer) / FLURRY_MULTIPLIER);
 			} else {
-				m_nextMh -= (m_nextMh - m_currentTimer) / FLURRY_MULTIPLIER;
+				m_nextMh -=  (m_nextMh - m_currentTimer)-((m_nextMh - m_currentTimer) / FLURRY_MULTIPLIER);
 			}
 
 			if (m_nextOh < m_currentTimer) {
